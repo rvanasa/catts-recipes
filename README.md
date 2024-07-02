@@ -36,6 +36,12 @@ The `query` command will fetch the query results from the specified recipe and p
 catts query <recipeFolder> -i <index>
 ```
 
+To get more detailed output, including verbose logging, use the -v or --verbose option:
+
+```bash
+catts query <recipeFolder> -v
+```
+
 ### Running
 
 To run a recipe, use the `run` command:
@@ -45,6 +51,12 @@ catts run <recipeFolder>
 ```
 
 The `run` command will fetch the query results from the specified recipe, run the processor script, validate the schema items against the recipe's schema, and print the results to the console.
+
+To get more detailed output, including verbose logging, use the `-v` or `--verbose` option:
+
+```bash
+catts run <recipeFolder> -v
+```
 
 ### Customizing the user address
 
