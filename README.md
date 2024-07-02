@@ -5,6 +5,12 @@ This repository contains some example recipes for the C–ATTS service. Use them
 > [!NOTE]  
 > This repository is a work in progress. Features and functionality may change without notice. C–ATTS has not yet been publicly released.
 
+## What is C–ATTS?
+
+C–ATTS, or Composite Attestations, is a new type of attestation that combines data from multiple sources to form a unified and verifiable credential.
+
+To learn more, see the [C–ATTS website](https://catts.run).
+
 ## Installation
 
 Clone this repository and install the dependencies:
