@@ -1,5 +1,5 @@
 const recipe = {
-  name: "eu_gtc_passport_30",
+  name: "eu-gtc-passport_30",
   queries: [
     {
       endpoint: "https://optimism.easscan.org/graphql",

@@ -1,5 +1,5 @@
 const recipe = {
-  name: "armitage_contributor",
+  name: "armitage-contributor",
   queries: [
     {
       endpoint: "https://sepolia.easscan.org/graphql",
@@ -10,7 +10,7 @@ const recipe = {
           {
             decodedDataJson
           }
-        }      
+        }
       `,
       variables: {
         where: {
