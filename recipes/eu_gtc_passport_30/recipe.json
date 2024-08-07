@@ -1,7 +1,7 @@
 {
   "name": "eu-gtc-passport-30",
   "description": "Attest if the following two criteria are met: 1. Gitcoin Passport score of 30 or more (Optimism) 2. Coinbase, country of residence is in the EU (Base)",
-  "keywords": ["gitcoin", "gitcoin passport", "coinbase"],
+  "keywords": ["gitcoin", "passport", "coinbase"],
   "queries": [
     {
       "endpoint": "https://optimism.easscan.org/graphql",
