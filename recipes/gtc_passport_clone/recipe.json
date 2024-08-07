@@ -1,6 +1,7 @@
 {
   "name": "eu-gtc-passport-clone",
   "description": "Make a copy of your Gitcoin Passport score to another chain.",
+  "keywords": ["gitcoin", "gitcoin passport"],
   "queries": [
     {
       "endpoint": "https://optimism.easscan.org/graphql",

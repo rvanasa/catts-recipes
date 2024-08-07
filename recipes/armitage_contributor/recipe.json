@@ -1,6 +1,6 @@
 {
   "name": "armitage-contributor",
-  "description": "Attests to active contributors to the Armitage project. Armitage tracks GitHub contributions using SourceCred. A SourceCred score of at least 100 is required for this attestation.",
+  "description": "Attests to active contributors to the Armitage project. A SourceCred score of at least 100 is required for this attestation.",
   "queries": [
     {
       "endpoint": "https://sepolia.easscan.org/graphql",
