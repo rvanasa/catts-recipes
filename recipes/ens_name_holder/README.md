@@ -8,4 +8,4 @@ The Ethereum Name Service (ENS) is a distributed, open naming system based on th
 
 ## Query details
 
-This recipe looks for a registration of the user's Ethereum address on the ENS subgraph. To learn more about ENS and to create a registration, see https://docs.ens.domains.
+This recipe looks for a registration of the user's Ethereum address on the [ENS subgraph](https://thegraph.com/explorer/subgraphs/5XqPmWe6gjyrJtFn9cLy237i4cWw2j9HcUJEXsP5qGtH). To learn more about ENS and to create a registration, see https://docs.ens.domains.
