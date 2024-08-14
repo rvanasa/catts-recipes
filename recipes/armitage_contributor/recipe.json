@@ -1,6 +1,7 @@
 {
   "name": "armitage-contributor",
   "description": "Attests to active contributors to the Armitage project. A SourceCred score of at least 100 is required for this attestation.",
+  "keywords": ["armitage", "sourcecred"],
   "queries": [
     {
       "endpoint": "https://sepolia.easscan.org/graphql",
