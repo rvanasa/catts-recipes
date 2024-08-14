@@ -1,0 +1,15 @@
+{
+  "name": "ens-delegate",
+  "description": "Attests to being an ENS delegate.",
+  "keywords": ["ens"],
+  "queries": [
+    {
+      "endpoint": "https://gateway.thegraph.com/api/{api-key}/subgraphs/id/GyijYxW9yiSRcEd5u2gfquSvneQKi5QuvU3WZgFyfFSn",
+      "query": "query Delegate($id: ID!) { delegate(id: $id ) { numberVotes } }",
+      "variables": { "id": "{user_eth_address}" }
+    }
+  ],
+  "schema": "bool isEnsDelegate",
+  "resolver": "0x0000000000000000000000000000000000000000",
+  "revokable": false
+}
