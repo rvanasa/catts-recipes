@@ -1,0 +1,43 @@
+{
+  "name": "op-retro-pgf-badgeholder",
+  "description": "Create a copy of your RetroPGF badgeholder attestation to another chain.",
+  "keywords": ["optimism", "retropgf"],
+  "queries": [
+    {
+      "endpoint": "https://optimism.easscan.org/graphql",
+      "query": "query Query($where: AttestationWhereInput, $take: Int, $orderBy: [AttestationOrderByWithRelationInput!]) { attestations(where: $where, take: $take, orderBy: $orderBy) { decodedDataJson } }",
+      "variables": {
+        "where": {
+          "schemaId": {
+            "equals": "0xfdcfdad2dbe7489e0ce56b260348b7f14e8365a8a325aef9834818c00d46b31b"
+          },
+          "recipient": {
+            "equals": "{user_eth_address}",
+            "mode": "insensitive"
+          },
+          "OR": [
+            {
+              "attester": {
+                "equals": "0xE4553b743E74dA3424Ac51f8C1E586fd43aE226F"
+              }
+            },
+            {
+              "attester": {
+                "equals": "0x621477dBA416E12df7FF0d48E14c4D20DC85D7D9"
+              }
+            }
+          ]
+        },
+        "take": 1,
+        "orderBy": [
+          {
+            "timeCreated": "desc"
+          }
+        ]
+      }
+    }
+  ],
+  "schema": "string rpgfRound,address referredBy,string referredMethod",
+  "resolver": "0x0000000000000000000000000000000000000000",
+  "revokable": false
+}
