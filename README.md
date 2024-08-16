@@ -1,13 +1,16 @@
 # C–ATTS Recipes
 
-This repository contains some example recipes for the C–ATTS service. Use them as a starting point for your own recipes.
-
-> [!NOTE]  
-> This repository is a work in progress. Features and functionality may change without notice. C–ATTS has not yet been publicly released.
+This repository contains the recipes managed by the C–ATTS project. Feel free to use them as a starting point for your own recipes or to contribute to this repository.
 
 ## What is C–ATTS?
 
 C–ATTS, or Composite Attestations, is a new type of attestation that combines data from multiple sources to form a unified and verifiable credential.
+
+A recipe is a set of queries that fetch attestations and process them to produce a JSON-formatted attestation that can be minted as an onchain composite attestation by the C–ATTS service. C–ATTS supports any data source that can be queried using GraphQL. 
+
+Recipes are stored in the `recipes` folder of this repository. 
+
+The processing logic is made up of a JavaScript file that is executed by the C–ATTS service, onchain in a secure environment.
 
 To learn more, see the [C–ATTS website](https://catts.run).
 
@@ -26,7 +29,20 @@ The only dependency needed is the C–ATTS SDK, packaged as a CLI tool. Install 
 npm install -g catts-sdk
 ```
 
-## CLI Usage
+## Query variables
+
+C–ATTS supports dynamic variables in the queries and the query endpoints. The following variables are supported:
+
+### Endpoint variables
+
+- `{api-key}`: For querying The Graph endpoints only. C–ATTS manages an API key and will automatically inject it into the query. See for instance the [ENS name holder recipe](https://github.com/c-atts/catts-recipes/blob/main/recipes/ens_name_holder/recipe.json).
+
+### Query variables
+
+- `{user_eth_address}`: The Ethereum address of the current user.
+- `{user_eth_address_lowercase}`: The Ethereum address of the current user, lowercased.
+
+## Test run recipes using the CLI tool
 
 ### Querying
 
@@ -73,7 +89,17 @@ catts query <recipeFolder> -e <address>
 catts run <recipeFolder> -e <address>
 ```
 
+## Author
+
+- [kristofer@kristoferlund.se](mailto:kristofer@kristoferlund.se)
+- Twitter: [@kristoferlund](https://twitter.com/kristoferlund)
+- Discord: kristoferkristofer
+- Telegram: [@kristoferkristofer](https://t.me/kristoferkristofer)
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request if you have any suggestions or improvements.
-
