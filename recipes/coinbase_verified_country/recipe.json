@@ -1,0 +1,31 @@
+{
+  "name": "coinbase-verified-country",
+  "description": "Create a copy of your Coinbase verified country attestation to another chain.",
+  "keywords": ["coinbase"],
+  "queries": [
+    {
+      "endpoint": "https://base.easscan.org/graphql",
+      "query": "query Query($where: AttestationWhereInput, $take: Int, $orderBy: [AttestationOrderByWithRelationInput!]) { attestations(where: $where, take: $take, orderBy: $orderBy) { decodedDataJson } }",
+      "variables": {
+        "where": {
+          "schemaId": {
+            "equals": "0x1801901fabd0e6189356b4fb52bb0ab855276d84f7ec140839fbd1f6801ca065"
+          },
+          "recipient": {
+            "equals": "{user_eth_address}",
+            "mode": "insensitive"
+          }
+        },
+        "take": 1,
+        "orderBy": [
+          {
+            "timeCreated": "desc"
+          }
+        ]
+      }
+    }
+  ],
+  "schema": "string verifiedCountry",
+  "resolver": "0x0000000000000000000000000000000000000000",
+  "revokable": false
+}
