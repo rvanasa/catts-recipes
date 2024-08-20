@@ -1,0 +1,13 @@
+{
+  "name": "eth-positive-balance",
+  "description": "Attest to holding >0 Eth at time of attestation.",
+  "keywords": ["eth"],
+  "queries": [
+    {
+      "url": "https://deep-index.moralis.io/api/v2.2/{user_eth_address_lowercase}/balance?chain=eth"
+    }
+  ],
+  "schema": "bool holdsEth",
+  "resolver": "0x0000000000000000000000000000000000000000",
+  "revokable": false
+}
