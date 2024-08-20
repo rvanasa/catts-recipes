@@ -4,9 +4,11 @@
   "keywords": ["ens"],
   "queries": [
     {
-      "endpoint": "https://gateway.thegraph.com/api/{api-key}/subgraphs/id/GyijYxW9yiSRcEd5u2gfquSvneQKi5QuvU3WZgFyfFSn",
-      "query": "query Delegate($id: ID!) { delegate(id: $id ) { numberVotes } }",
-      "variables": { "id": "{user_eth_address}" }
+      "url": "https://gateway.thegraph.com/api/{api-key}/subgraphs/id/GyijYxW9yiSRcEd5u2gfquSvneQKi5QuvU3WZgFyfFSn",
+      "body": {
+        "query": "query Delegate($id: ID!) { delegate(id: $id ) { numberVotes } }",
+        "variables": { "id": "{user_eth_address}" }
+      }
     }
   ],
   "schema": "bool isEnsDelegate",

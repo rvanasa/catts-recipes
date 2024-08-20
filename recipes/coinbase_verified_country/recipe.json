@@ -4,24 +4,26 @@
   "keywords": ["coinbase"],
   "queries": [
     {
-      "endpoint": "https://base.easscan.org/graphql",
-      "query": "query Query($where: AttestationWhereInput, $take: Int, $orderBy: [AttestationOrderByWithRelationInput!]) { attestations(where: $where, take: $take, orderBy: $orderBy) { decodedDataJson } }",
-      "variables": {
-        "where": {
-          "schemaId": {
-            "equals": "0x1801901fabd0e6189356b4fb52bb0ab855276d84f7ec140839fbd1f6801ca065"
+      "url": "https://base.easscan.org/graphql",
+      "body": {
+        "query": "query Query($where: AttestationWhereInput, $take: Int, $orderBy: [AttestationOrderByWithRelationInput!]) { attestations(where: $where, take: $take, orderBy: $orderBy) { decodedDataJson } }",
+        "variables": {
+          "where": {
+            "schemaId": {
+              "equals": "0x1801901fabd0e6189356b4fb52bb0ab855276d84f7ec140839fbd1f6801ca065"
+            },
+            "recipient": {
+              "equals": "{user_eth_address}",
+              "mode": "insensitive"
+            }
           },
-          "recipient": {
-            "equals": "{user_eth_address}",
-            "mode": "insensitive"
-          }
-        },
-        "take": 1,
-        "orderBy": [
-          {
-            "timeCreated": "desc"
-          }
-        ]
+          "take": 1,
+          "orderBy": [
+            {
+              "timeCreated": "desc"
+            }
+          ]
+        }
       }
     }
   ],

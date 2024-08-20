@@ -4,9 +4,11 @@
   "keywords": ["ens"],
   "queries": [
     {
-      "endpoint": "https://gateway.thegraph.com/api/{api-key}/subgraphs/id/5XqPmWe6gjyrJtFn9cLy237i4cWw2j9HcUJEXsP5qGtH",
-      "query": "query EnsNameHolderQuery($id: ID!) { account(id: $id) { id registrations(first: 10) { domain { owner { id } } } } }",
-      "variables": { "id": "{user_eth_address_lowercase}" }
+      "url": "https://gateway.thegraph.com/api/{api-key}/subgraphs/id/5XqPmWe6gjyrJtFn9cLy237i4cWw2j9HcUJEXsP5qGtH",
+      "body": {
+        "query": "query EnsNameHolderQuery($id: ID!) { account(id: $id) { id registrations(first: 10) { domain { owner { id } } } } }",
+        "variables": { "id": "{user_eth_address_lowercase}" }
+      }
     }
   ],
   "schema": "bool isEnsNameOwner",
