@@ -1,5 +1,5 @@
 {
-  "name": "coinbase-verified-acocount",
+  "name": "coinbase-verified-account",
   "description": "Create a copy of your Coinbase verified account attestation to another chain.",
   "keywords": ["coinbase"],
   "queries": [
