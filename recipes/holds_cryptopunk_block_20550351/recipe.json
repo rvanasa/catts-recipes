@@ -1,0 +1,14 @@
+{
+  "name": "holds-cryptopunk-block-20550351",
+  "description": "Attest to holding a CryptoPunk NFT at block 20550351.",
+  "keywords": ["nft", "cryptopunks"],
+  "queries": [
+    {
+      "url": "https://deep-index.moralis.io/api/v2.2/{user_eth_address_lowercase}/nft?chain=eth&format=decimal&token_addresses%5B0%5D=0xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb&media_items=false",
+      "filter": "$.result[*].block_number"
+    }
+  ],
+  "schema": "bool holdsPunk",
+  "resolver": "0x0000000000000000000000000000000000000000",
+  "revokable": false
+}
